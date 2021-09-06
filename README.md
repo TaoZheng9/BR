@@ -11,7 +11,7 @@
 
 2. Convert the mp4 clips into frames, and convert the binaural audios into mono audios by FFmpeg(https://FFmpeg.org/)
 
-3. Use the following command to train the Phase-Mag Binaural model (please note that in different epochs of validation and testing, the frames is not selected by uniform random from the 10s clips, but from the fixed frames from the moment of 5s):
+3. Use the following command to train the Phase-Mag Binaural model (Please note that in different epochs of validation and testing, the frames are not selected by uniform random from the 10s length clips, but from the fixed frames at the moment of the 5s):
 ```
 python train.py --hdf5FolderPath /YOUR_CODE_PATH/2.5d_visual_sound/hdf5/ --name mono2binaural --model audioVisual --checkpoints_dir /YOUR_CHECKPOINT_PATH/ --save_epoch_freq 50 --display_freq 10 --save_latest_freq 100 --batchSize 256 --learning_rate_decrease_itr 10 --niter 1000 --lr_visual 0.0001 --lr_audio 0.001 --nThreads 32 --gpu_ids 0,1,2,3,4,5,6,7 --validation_on --validation_freq 100 --validation_batches 50 --tensorboard True |& tee -a mono2binaural.log
 ```
