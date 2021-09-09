@@ -1,5 +1,5 @@
 ## Binaural Ratio
-<img src='f3network.jpg' align="center"> 
+<img src='./f3network.jpg' align="center"> 
 
 <br/>
 
